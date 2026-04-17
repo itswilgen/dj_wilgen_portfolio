@@ -1,0 +1,24 @@
+<?php
+
+declare(strict_types=1);
+
+return [
+    'db' => [
+        'host' => getenv('DB_HOST') ?: 'localhost',
+        'username' => getenv('DB_USERNAME') ?: 'root',
+        'password' => getenv('DB_PASSWORD') ?: '',
+        'database' => getenv('DB_DATABASE') ?: 'dj_wilgen_db',
+    ],
+    'site' => [
+        'name' => 'DJ Wilgen Rivas',
+        'admin_email' => getenv('ADMIN_EMAIL') ?: 'wilgenrivas123@gmail.com',
+        'from_email' => getenv('FROM_EMAIL') ?: 'no-reply@djwilgen.com',
+        'reply_to' => getenv('REPLY_TO_EMAIL') ?: 'contact@djwilgen.com',
+        'base_url' => getenv('APP_URL') ?: '',
+    ],
+    'auth' => [
+        'admin_password' => getenv('ADMIN_PASSWORD') ?: 'wilgen@22',
+        'admin_password_hash' => getenv('ADMIN_PASSWORD_HASH') ?: '',
+        'session_key' => 'admin_logged_in',
+    ],
+];

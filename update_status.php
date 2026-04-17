@@ -4,4 +4,4 @@ declare(strict_types=1);
 
 require __DIR__ . '/app/bootstrap.php';
 
-(new App\Controllers\PageController())->about();
+(new App\Controllers\AdminController())->updateStatus();

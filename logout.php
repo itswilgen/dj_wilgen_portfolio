@@ -1,6 +1,7 @@
 <?php
-session_start();
-session_unset();
-session_destroy();
-header("Location: login.php");
-exit;
+
+declare(strict_types=1);
+
+require __DIR__ . '/app/bootstrap.php';
+
+(new App\Controllers\AuthController())->logout();
