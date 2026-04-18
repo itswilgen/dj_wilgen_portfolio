@@ -3,6 +3,15 @@
 declare(strict_types=1);
 
 return [
+    'app' => [
+        'key' => getenv('APP_KEY')
+            ?: hash(
+                'sha256',
+                (getenv('ADMIN_PASSWORD_HASH') ?: getenv('ADMIN_PASSWORD') ?: 'change-me')
+                . '|dj-wilgen-rivas'
+            ),
+        'session_cookie' => getenv('SESSION_COOKIE') ?: 'dj_wilgen_session',
+    ],
     'db' => [
         'host' => getenv('DB_HOST') ?: 'localhost',
         'username' => getenv('DB_USERNAME') ?: 'root',

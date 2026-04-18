@@ -61,6 +61,10 @@ $bookings = $bookings ?? [];
 
     <?php if (($upload ?? '') === 'success'): ?>
         <div class="alert alert-success">Gallery image uploaded successfully.</div>
+    <?php elseif (($upload ?? '') === 'vercel_storage_required'): ?>
+        <div class="alert alert-warning">
+            Gallery uploads are disabled on Vercel because this project still saves files to local disk. Use Vercel Blob, Cloudinary, or S3 for runtime uploads.
+        </div>
     <?php elseif (($upload ?? '') === 'toolarge'): ?>
         <div class="alert alert-warning">Upload failed. The image is larger than 2MB.</div>
     <?php elseif (($upload ?? '') === 'invalidtype'): ?>

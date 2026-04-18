@@ -34,6 +34,10 @@ final class Gallery
 
     public function upload(array $file): string
     {
+        if (getenv('VERCEL')) {
+            return 'vercel_storage_required';
+        }
+
         if (($file['error'] ?? UPLOAD_ERR_NO_FILE) !== UPLOAD_ERR_OK) {
             return 'error';
         }
