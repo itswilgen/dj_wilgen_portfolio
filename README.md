@@ -20,6 +20,6 @@ This project now uses a simple custom PHP MVC structure with OOP classes.
 ## Vercel
 
 - `vercel.json` is included and uses the `vercel-php` community runtime.
-- Set these environment variables in Vercel: `DB_HOST`, `DB_USERNAME`, `DB_PASSWORD`, `DB_DATABASE`, `APP_KEY`, `APP_URL`, and either `ADMIN_PASSWORD` or `ADMIN_PASSWORD_HASH`.
+- Set these environment variables in Vercel: `DB_HOST`, `DB_PORT`, `DB_USERNAME`, `DB_PASSWORD`, `DB_DATABASE`, `APP_KEY`, `APP_URL`, and either `ADMIN_PASSWORD` or `ADMIN_PASSWORD_HASH`.
 - Gallery uploads are intentionally blocked on Vercel because this app still writes new files to local disk. Use Vercel Blob, Cloudinary, or S3 for runtime uploads.
 - The repository currently includes large video files. On Vercel Hobby, source uploads are limited to 100 MB, so you will likely need to move those assets to external storage/CDN or upgrade your plan.

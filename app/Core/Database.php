@@ -21,7 +21,8 @@ final class Database
             (string) Config::get('db.host'),
             (string) Config::get('db.username'),
             (string) Config::get('db.password'),
-            (string) Config::get('db.database')
+            (string) Config::get('db.database'),
+            (int) Config::get('db.port', 3306)
         );
 
         if ($connection->connect_error) {

@@ -14,6 +14,7 @@ return [
     ],
     'db' => [
         'host' => getenv('DB_HOST') ?: 'localhost',
+        'port' => (int) (getenv('DB_PORT') ?: 3306),
         'username' => getenv('DB_USERNAME') ?: 'root',
         'password' => getenv('DB_PASSWORD') ?: '',
         'database' => getenv('DB_DATABASE') ?: 'dj_wilgen_db',
