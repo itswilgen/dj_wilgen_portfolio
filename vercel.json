@@ -1,53 +1,70 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "functions": {
-    "index.php": {
-      "runtime": "vercel-php@0.9.0"
-    },
-    "about.php": {
-      "runtime": "vercel-php@0.9.0"
-    },
-    "contact.php": {
-      "runtime": "vercel-php@0.9.0"
-    },
-    "events.php": {
-      "runtime": "vercel-php@0.9.0"
-    },
-    "booking.php": {
-      "runtime": "vercel-php@0.9.0"
-    },
-    "process_booking.php": {
-      "runtime": "vercel-php@0.9.0"
-    },
-    "login.php": {
-      "runtime": "vercel-php@0.9.0"
-    },
-    "logout.php": {
-      "runtime": "vercel-php@0.9.0"
-    },
-    "admin_panel.php": {
-      "runtime": "vercel-php@0.9.0"
-    },
-    "update_status.php": {
-      "runtime": "vercel-php@0.9.0"
-    },
-    "delete_booking.php": {
-      "runtime": "vercel-php@0.9.0"
-    },
-    "upload.php": {
-      "runtime": "vercel-php@0.9.0"
-    },
-    "fetch_events.php": {
-      "runtime": "vercel-php@0.9.0"
-    },
-    "admin.php": {
+    "api/*.php": {
       "runtime": "vercel-php@0.9.0"
     }
   },
   "rewrites": [
     {
       "source": "/",
-      "destination": "/index.php"
+      "destination": "/api/index.php"
+    },
+    {
+      "source": "/index.php",
+      "destination": "/api/index.php"
+    },
+    {
+      "source": "/about.php",
+      "destination": "/api/about.php"
+    },
+    {
+      "source": "/contact.php",
+      "destination": "/api/contact.php"
+    },
+    {
+      "source": "/events.php",
+      "destination": "/api/events.php"
+    },
+    {
+      "source": "/booking.php",
+      "destination": "/api/booking.php"
+    },
+    {
+      "source": "/process_booking.php",
+      "destination": "/api/process_booking.php"
+    },
+    {
+      "source": "/login.php",
+      "destination": "/api/login.php"
+    },
+    {
+      "source": "/logout.php",
+      "destination": "/api/logout.php"
+    },
+    {
+      "source": "/admin_panel.php",
+      "destination": "/api/admin_panel.php"
+    },
+    {
+      "source": "/update_status.php",
+      "destination": "/api/update_status.php"
+    },
+    {
+      "source": "/delete_booking.php",
+      "destination": "/api/delete_booking.php"
+    },
+    {
+      "source": "/upload.php",
+      "destination": "/api/upload.php"
+    },
+    {
+      "source": "/fetch_events.php",
+      "destination": "/api/fetch_events.php"
+    },
+    {
+      "source": "/admin.php",
+      "destination": "/api/admin.php"
     }
   ]
 }
